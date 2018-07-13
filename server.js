@@ -7,7 +7,7 @@ const Gpio = require('onoff').Gpio;
 // init server
 app.listen(300);
 var v = 0;
-var leds = ["P8_18", "P8_14", "P8_15", "P8_16", "P8_17",  "P9_14", "P9_15", "P9_16", "P9_17", "P9_18", "USR0", "USR1", "USR2", "USR3"];
+var leds = ["4", "5", "6", "7", "8",  "14", "15", "16", "17", "18"];
 var LEDS = [];
 
 leds.forEach(element => {
