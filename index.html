@@ -1,0 +1,85 @@
+<html>
+<head>
+    <script src = "/socket.io/socket.io.js" > </script>
+    <script type=text/javascript src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script>
+        var socket = io.connect();
+            socket.on('ledstatus', function (data) {
+                console.log(data);
+                $("body").css("background-color", data);
+            });
+    </script>
+    <script>
+    function ledOn(i){
+      socket.emit('led', i + 'on');
+    }
+    function ledOff(i){
+      socket.emit('led', i + 'off');
+    }
+    </script>
+    <style>
+        input {width:100px; height:100px; font-size:xx-large}
+        p {width:120px; height:100px; font-size:xx-large}
+    </style>
+</head> 
+ 
+<body>
+<table>
+    <tr>
+        <td>
+        <input type="button" name="on" id="onButton" value="on" onClick="ledOn(0);">
+        </td>
+        <td>
+        <p>Living 1</p>
+        </td>
+        <td>
+        <input type="button" name="off" id="offButton" value="off" onClick="ledOn(5);"> 
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <input type="button" name="on" id="onButton" value="on" onClick="ledOn(1);">
+        </td>
+        <td>
+        <p>Living 2</p>
+        </td>
+        <td>
+        <input type="button" name="off" id="offButton" value="off" onClick="ledOn(6);">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <input type="button" name="on" id="onButton" value="on" onClick="ledOn(2);">
+        </td>
+        <td>
+        <p>Living 3</p>
+        </td>
+        <td>
+        <input type="button" name="off" id="offButton" value="off" onClick="ledOn(7);">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <input type="button" name="on" id="onButton" value="on" onClick="ledOn(3);">
+        </td>
+        <td>
+        <p>Room CAM</p>
+        </td>
+        <td>
+        <input type="button" name="off" id="offButton" value="off" onClick="ledOn(8);">
+        </td>
+    </tr>    
+    <tr>
+        <td>
+        <input type="button" name="on" id="onButton" value="on" onClick="ledOn(4);">
+        </td>
+        <td>
+        <p>Living CAM</p>
+        </td>
+        <td>
+        <input type="button" name="off" id="offButton" value="off" onClick="ledOn(9);"> 
+        </td>
+    </tr>    
+</table>
+</body>
+</html>
