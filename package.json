@@ -3,28 +3,12 @@
     "version": "1.0.0",
     "description": "Home Template",
     "main": "server.js",
-    "scripts": {
-      "start": "node server.js"
-    },
-    "keywords": [
-      "npm",
-    ],
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/kpoon12/home.git"
-    },
     "author": "Edward Poon",
     "license": "MIT",
-    "babel": {
-      "presets": [
-        "Node"
-      ]
-    },
-    "devDependencies": {
-        "http":"^0.0.0",
-        "socket.io":"^2.1.1",
-        "fs":"^0.0.1-security",
-        "onoff":"^3.1.0",
+    "dependencies": {
+        "fs": "0.0.1-security",
+        "http": "0.0.0",
+        "onoff": "^3.1.0",
+        "socket.io": "^2.1.1"
     }
-  }
-  
+}
